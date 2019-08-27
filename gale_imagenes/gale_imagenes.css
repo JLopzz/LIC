@@ -1,0 +1,10 @@
+header{
+    border: 1px solid black;
+}
+footer{
+    border: 1px solid black;
+}
+.foot-bottom,.foot-right,.foot-left{
+    border: 1px solid black;
+}
+
