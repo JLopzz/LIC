@@ -15,7 +15,7 @@ body{
   color: #fff;
   text-align: center;
 }
-img{
+.imagenes{
   border-radius: 20px;
   width: 350px;
   height: 350px;
@@ -49,4 +49,7 @@ img{
 }
 .price{
   font-size: 30px;
+}
+footer{
+  margin-top: 80%;
 }
