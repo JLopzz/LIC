@@ -54,7 +54,7 @@ nav.submenu >ul{
     display: table;
     overflow: hidden;
     width: 100%;
-    background-color: cadetblue;
+    
     position: relative;
 }
 
@@ -73,5 +73,17 @@ nav.submenu >ul li a{
     color: black;
 }
 
+div.titulos{
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1200px;
+    padding: 1.5rem;
+    font-size: 30px;
+}
 
-
+img.portadas{
+    height:360px;
+    width: 230px;
+    border-radius: 20px;
+    border: 5px solid #ccc;
+}
