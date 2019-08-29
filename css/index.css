@@ -1,6 +1,10 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(165deg, #f6f5f5 6rem, #981914 7rem);
 }
 
 header{
@@ -54,7 +58,7 @@ nav.submenu >ul{
     display: table;
     overflow: hidden;
     width: 100%;
-    
+
     position: relative;
 }
 
