@@ -11,8 +11,8 @@
   font-size: 20px;
 }
 body{
-  background-color: rgb(2, 89, 170);
-  color: #fff;
+  background-color: #981914;
+  color: #f6f5f5;
   text-align: center;
 }
 .imagenes{
@@ -39,11 +39,10 @@ body{
   font-size: 30px;
   font-family: "Century Gothic",sans-serif;
   color: rgb(0, 0, 0);
-  background-color: rgba(94, 45, 233, 0.52);
-  margin: 0 auto;
+  background-color: #f6f5f5;
   border-radius: 20px;
   border-style: solid;
-  border-color: white;
+  border-color: #000000;
   margin-bottom: 30px;
   margin-top: 30px;
 }
