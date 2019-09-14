@@ -15,25 +15,4 @@ div>p{
 
 div.descripcion >div.logo{
    left: 15em;
-}
-
-#mapa{
-    text-align: left;
-    padding-left:35%;
-    list-style-type: upper-roman;
-}
-#submapa{
-    padding-left:5%;
-}
-footer{
-    margin-top:5%;
-    padding-bottom:7%
-}
-.mapa{
-    background-color:#f6f5f5;
-    margin: 25px 25%;
-    border-radius:50px;
-}
-.mapa ul, .mapa li{
-    color:#981914
-}
+  }
