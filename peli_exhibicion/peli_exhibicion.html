@@ -5,10 +5,51 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Peliculas en Exhibicion</title>
   <link rel="shortcut icon" href="../IMG/logo-cine.png" type="image/x-icon">
+  <script src="../js/res/exhibicion.js"></script>
   <link rel="stylesheet" href="../css/main.css">
-  <link rel="stylesheet" href="./peli_exhibicion.css">
+  <style>
+    .container {
+      height: 100%;
+      position: relative;
+      margin: 0 2%;
+      align-items: center;
+    }
+
+    .galery-title {
+      width: 100%;
+      position: relative;
+      text-align: center;
+    }
+
+    .card-cont {
+      display: flex;
+      flex: row;
+      justify-content: center;
+    }
+
+    .card {
+      display: flex;
+      flex: auto;
+      justify-content: center;
+      width: 35%;
+      max-width: 470px;
+      min-width: 300px;
+      margin: 1%;
+      padding: 1.5% 0.5%;
+      border-radius: 10px;
+      background-color: rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+
+    .card-img {
+      position: relative;
+      width: 90%;
+      align-items: center;
+    }
+
+  </style>
+  <title>Peliculas en Exhibicion</title>
 </head>
 
 <body>
@@ -20,7 +61,8 @@
       <ul>
         <li><a href="../index.html">Principal</a></li>
         <li><a href="../dulceria/dulceria.html">Dulceria</a></li>
-        <li style="color: #f6f5f5;background-color: #981914;"><a href="../peli_exhibicion/peli_exhibicion.html">Exhibiendose</a></li>
+        <li style="color: #f6f5f5;background-color: #981914;"><a
+            href="../peli_exhibicion/peli_exhibicion.html">Exhibiendose</a></li>
         <li><a href="../prox_estrenos/prox_estrenos.html">Estrenos</a></li>
         <li><a href="../descuentos/descuentos.html">Promociones</a></li>
         <li><a href="../gale_imagenes/gale_imagenes.html">Galeria</a></li>
@@ -86,5 +128,7 @@
       </div>
     </article>
   </footer>
+  <script src="../js/load.js"></script>
 </body>
+
 </html>
