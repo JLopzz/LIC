@@ -1,22 +1,3 @@
-div.titulos{
-    margin: 20px auto;
-    width: 90%;
-    max-width: 1200px;
-    padding: 1.5rem;
-    font-size: 30px;
-}
-
-div>p{
-    margin: 20px auto;
-    width: 90%;
-    max-width: 1200px;
-    padding: 0.5rem;
-}
-
-div.descripcion >div.logo{
-   left: 15em;
-}
-
 #mapa{
     text-align: left;
     padding-left:35%;
@@ -24,10 +5,6 @@ div.descripcion >div.logo{
 }
 #submapa{
     padding-left:5%;
-}
-footer{
-    margin-top:5%;
-    padding-bottom:7%
 }
 .mapa{
     background-color:#f6f5f5;
