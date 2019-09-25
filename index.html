@@ -7,8 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Página de Cine</title>
   <link rel="shortcut icon" href="./res/logo.png" type="image/x-icon">
-  <link rel="stylesheet" href="./res/index.css">
-  <link rel="stylesheet" href="./res/main.css">
+  <link rel="stylesheet" href="./res/frame.css">
+  <link rel="stylesheet" href="./res/responsive.css">
 </head>
 
 <body>
@@ -31,67 +31,80 @@
 
   <section id="main">
     <div class="separador">
-      <hr>
       <span>&#127916;Películas en cartelera&#127916;</span>
+      <hr>
     </div>
+    <article class="cards">
+      <div>
+        <a href="./data/p001/info_habia.html">
+          <img src="./data/p001/portada01_habia.jpg">
+        </a>
+      </div>
+      <div>
+        <a href="./data/p002/info_rapidos.html">
+          <img src="./data/p002/portada01_rapidos.jpg">
+        </a>
+      </div>
+      <div>
+        <a href="./data/p003/info_reyleon.html">
+          <img src="./data/p003/portada01_reyleon.jpg">
+        </a>
+      </div>
+      <div>
+        <a href="./data/p004/info_historias.html">
+          <img src="./data/p004/portada01_historias.jpg">
+        </a>
+      </div>
+    </article>
     <div class="encartelera">
       <nav class="submenu">
         <ul>
-          <li><a href="./data/p001/info_habia.html">
-              <img src="./data/p001/portada_habia.jpg" class="portadas"></a>
-          </li>
-          <li><a href="./data/p002/info_rapidos.html">
-              <img src="./data/p002/portada_rapidos.jpg" class="portadas"></a>
-          </li>
-          <li><a href="./data/p003/info_reyleon.html">
-              <img src="./data/p003/portada_reyleon.jpg" class="portadas"></a>
-          </li>
-          <li><a href="./data/p004/info_historias.html">
-              <img src="./data/p004/portada_historias.jpg" class="portadas"></a>
-          </li>
+
         </ul>
       </nav>
     </div>
     <div class="separador">
-      <hr>
       <span>&#127916;Películas en cartelera&#127916;</span>
+      <hr>
     </div>
-    <div class="proximos">
-      <nav class="submenu">
-        <ul>
-          <li><a href="./data/p006/info_metallica.html">
-              <img src="./data/p006/portada_metallica.jpg" class="portadas"></a>
-          </li>
-          <li><a href="./data/p007/info_musica.html">
-              <img src="./data/p007/portada_musica.jpg" class="portadas"></a>
-          </li>
-          <li><a href="./data/p008/info_muneco.html">
-              <img src="./data/p008/portada_muneco.jpg" class="portadas"></a>
-          </li>
-          <li><a href="./data/p009/info_agente.html">
-              <img src="./data/p009/portada_agente.jpg" class="portadas"></a>
-          </li>
-        </ul>
-      </nav>
+    <article class="cards">
+      <div>
+        <a href="./data/p006/info_metallica.html">
+          <img src="./data/p006/portada01_metallica.jpg">
+        </a>
+      </div>
+      <div>
+        <a href="./data/p007/info_musica.html">
+          <img src="./data/p007/portada02_musica.jpg">
+        </a>
+      </div>
+      <div>
+        <a href="./data/p008/info_muneco.html">
+          <img src="./data/p008/portada01_muneco.jpg">
+        </a>
+      </div>
+      <div>
+        <a href="./data/p009/info_agente.html">
+          <img src="./data/p009/portada01_agente.jpg">
+        </a>
+      </div>
   </section>
 
   <footer>
     <article>
-      <div id="left">
+      <div class="flogo">
         <img src="./res/logo.png" alt="logo">
         <span>Tu mejor opción en Peliculas</span>
       </div>
-      <div id="center">
-        <p>Links rápidos:</p>
-        <div class="twin">
+      <div class="flist">
+        <span>Links rápidos:</span>
+        <div class="twins">
           <ul>
             <li><a href="./index.html">Principal</a></li>
             <li><a href="./html/dulceria.html">Dulceria</a></li>
             <li><a href="./html/exhibicion.html">Exhibiendose</a></li>
             <li><a href="./html/proximos.html">Estrenos</a></li>
           </ul>
-        </div>
-        <div class="twin">
           <ul>
             <li><a href="./html/descuentos.html">Promociones</a></li>
             <li><a href="./html/galeria.html">Galeria</a></li>
@@ -99,7 +112,7 @@
           </ul>
         </div>
       </div>
-      <div id="right">
+      <div class="ftext">
         <span>Derechos Reservados &copy; 2019</span>
       </div>
     </article>

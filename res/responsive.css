@@ -1,20 +1,50 @@
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {}
 /* Mobile first */
-#main { text-align: center; }
-#main div,
-#main article { padding: 1rem; }
+#main {
+  padding: 1rem;
+  text-align: center;
+}
+
+#main > * { margin-top: 2rem; }
+#main > *:nth-child(1) { margin-top: 1rem; }
 
 /* ---------- Separador ---------- */
 #main .separador {}
-#main .separador hr { border: 2px solid #f6f5f5; }
+#main .separador hr {
+  position: relative;
+  bottom: 1rem;
+  border: 2px solid #f6f5f5;
+}
 #main .separador span {
   position: relative;
+  z-index: 100;
   padding: .3rem;
   line-height: 2rem;
   font-size: 2rem;
-  bottom: 1.5rem;
   background: #981914;
+}
+
+/* ---------- Subtitulo ---------- */
+#main .subtitulo {
+  display: inline-block;
+  padding: 1rem 2rem;
+  width: 90%;
+  border-radius: 25px;
+  background: rgba(0, 0, 0, 0.4);
+}
+#main .subtitulo span {
+  line-height: 1.3rem;
+  font-size: 1.3rem;
+  font-weight: bolder;
+  letter-spacing: .2rem;
+}
+
+/* ---------- Principal ---------- */
+#main article.principal {}
+#main article.principal img {
+  width: 80%;
+  border-radius: 1.4rem;
 }
 
 /* ---------- Tarjetas ---------- */
@@ -30,6 +60,7 @@
   padding: 1rem .5rem;
   border-radius: 10px;
   text-align: center;
+  vertical-align: text-top;
   background-color:rgba(0,0,0,0.2);
 }
 #main article.cards div img {
@@ -37,16 +68,26 @@
   width: 90%;
 }
 
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {}
+@media only screen and (min-width: 600px) {
+
+  #main article.cards div { width: 45%; }
+}
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-  #main article.cards div { width: 45%; }
+
+  #main .subtitulo { width: 75%; }
+  #main article.principal img { width: 60%; }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+
+  #main .subtitulo { width: 60%; }
+  #main article.principal img { width: 40%; }
+
   #main article.cards div { width: 30%; }
 }
 
