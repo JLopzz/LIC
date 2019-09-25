@@ -1,0 +1,54 @@
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {}
+/* Mobile first */
+#main { text-align: center; }
+#main div,
+#main article { padding: 1rem; }
+
+/* ---------- Separador ---------- */
+#main .separador {}
+#main .separador hr { border: 2px solid #f6f5f5; }
+#main .separador span {
+  position: relative;
+  padding: .3rem;
+  line-height: 2rem;
+  font-size: 2rem;
+  bottom: 1.5rem;
+  background: #981914;
+}
+
+/* ---------- Tarjetas ---------- */
+#main article.cards {
+  display: block;
+  position: relative;
+}
+
+#main article.cards div {
+  display: inline-block;
+  width: 90%;
+  margin: .5rem;
+  padding: 1rem .5rem;
+  border-radius: 10px;
+  text-align: center;
+  background-color:rgba(0,0,0,0.2);
+}
+#main article.cards div img {
+  position: relative;
+  width: 90%;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  #main article.cards div { width: 45%; }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  #main article.cards div { width: 30%; }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}

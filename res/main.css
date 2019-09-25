@@ -1,52 +1,20 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-size: 16px;
-  color: #f6f5f5;
-}
-
-body {
-  background: #981914;
-}
-
-ul, ol { list-style: none; }
-a, a:hover, a:visited, a:link{
-  color:black;
-  text-decoration: none;
-}
-
-ul li a[href="#"] {
-  color: #f6f5f5;
-  background-color: #981914;
-}
-
 /** ----------- added ----------- **/
-#main { text-align: center; }
-
-#main div,
-#main article { padding: 1rem; }
-
-#main .separador {}
-#main .separador hr { border: 2px solid #f6f5f5; }
-#main .separador span {
-  position: relative;
-  padding: .3rem;
-  line-height: 2rem;
-  font-size: 2rem;
-  bottom: 1.5rem;
-  background: #981914;
-}
 
 #main .subtitulo {}
 #main .subtitulo span {
+  display: inline-block;
+  width: 500px;
   padding: 1rem 2rem;
   line-height: 1.3rem;
   font-size: 1.3rem;
   font-weight: bolder;
   letter-spacing: .2rem;
-  border-radius: .5rem;
-  background: rgba(255, 255, 255, 0.4);
+  border-radius: 25px;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+#main .parrafo {
+
 }
 
 #main article.principal {}
@@ -88,106 +56,6 @@ ul li a[href="#"] {
 }
 #main article.imagen .precio { font-size: 2rem; }
 
-/* Header */
-body > header {
-  position: relative;
-  width: 100%;
-  height: 100px;
-  margin-bottom: 2rem;
-  background: #f6f5f5f1;
-  box-shadow: 0 5px 3px #f6f5f5f1;
-}
-body > header div {
-  display: inline-block;
-  vertical-align: top;
-}
-body > header #logo {
-  padding: 0 3%;
-  width: 15%;
-  height: 100%;
-}
-body > header #logo img {
-  height: 100%;
-}
-body > header #menu {
-  position: relative;
-  width: 70%;
-  height: 100%;
-}
-body > header #menu ul {
-  position: absolute;
-  width: 100%;
-  top: 50%;
-  transform: translateY(-50%);
-  text-align: center;
-}
-body > header #menu li {
-  display: inline-block;
-  padding: .4rem .5rem;
-  color: #981914;
-  font-weight: bolder;
-  transition: background, color .5s;
-}
-body > header #menu li a {
-    font-size: 1.3rem;
-  color: inherit;
-}
-body > header #menu li:hover {
-  color: #f6f5f5;
-  background-color: #981914;
-}
-
-
-/*Footer*/
-
-body > footer {
-  position: relative;
-  width: 100%;
-  background: #f6f5f5f1;
-  box-shadow: 0 -5px 3px #f6f5f5f1;
-}
-body > footer article { height: 140px; }
-body > footer article > div {
-  display: inline-block;
-  padding: 1.5rem;
-  height: 100%;
-  vertical-align: top;
-}
-body > footer #left {
-  padding: .5rem;
-  width: 25%;
-  text-align: center;
-}
-body > footer #left img {
-  display: inline-block;
-  height: 50%;
-}
-body > footer #left span {
-  display: inline-block;
-  width: 100%;
-  color: #981914;
-}
-
-body > footer #center { width: 40%; }
-body > footer p { color: #981914; }
-body > footer .twin:nth-child(2n+1) { margin-right: 5%; }
-body > footer .twin {
-  display: inline-block;
-  width: 45%;
-  text-align: right;
-}
-
-body > footer #right {
-  width: 25%;
-  text-align: center;
-}
-body > footer #right span {
-  display: block;
-  color: #981914;
-}
-
-
-
 /*
 
 Por revisar
@@ -205,15 +73,6 @@ body.descuento {
   height: 350px;
   margin-top: 20px;
   margin-bottom: 20px;
-}
-.descuento .descuento{
-  text-align: center;
-  font-size: 25px;
-  background-color: rgba(0, 0, 0, 0.4);
-  border-radius: 20px;
-  width: 500px;
-  margin: 0 auto;
-  padding: 10px;
 }
 .descuento .descrip{
   font-size: 25px;

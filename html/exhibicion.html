@@ -6,15 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Peliculas en Exhibicion</title>
-  <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
-  <link rel="stylesheet" href="../css/main.css">
-  <link rel="stylesheet" href="../css/peli_exhibicion.css">
+  <link rel="shortcut icon" href="../res/logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="../res/frame.css">
+  <link rel="stylesheet" href="../res/responsive.css">
 </head>
 
 <body>
   <header>
     <div id="logo">
-      <img src="../img/logo.png" alt="Logo de Cine">
+      <img src="../res/logo.png" alt="Logo de Cine">
     </div>
     <div id="menu">
       <ul>
@@ -34,46 +34,51 @@
       <hr>
       <span>Exhibiendose</span>
     </div>
-    <div class="card-cont">
-      <div class="card">
-        <a href="../info_peli/info_reyLeon.html"><img src="IMG/reyLeon.jpg" alt="" class="card-img"></a>
+
+    <article class="cards">
+      <div>
+        <a href="../data/p003/info_reyleon.html">
+          <img src="../data/p003/portada02_reyleon.jpg" alt="">
+        </a>
       </div>
-      <div class="card">
-        <a href="../info_peli/info_ready.html"><img src="IMG/readyOrNot.jpg" alt="" class="card-img"></a>
+      <div>
+        <a href="../data/p005/info_ready.html">
+          <img src="../data/p005/portada01_ready.jpg" alt="">
+        </a>
       </div>
-    </div>
-    <div class="card-cont">
-      <div class="card">
-        <a href="../info_peli/info_rapidos.html"><img src="IMG/rapidosFuriosos.jpg" alt="" class="card-img"></a>
+      <div>
+        <a href="../data/p002/info_rapidos.html">
+          <img src="../data/p002/portada03_rapidos.jpg" alt="">
+        </a>
       </div>
-      <div class="card">
-        <a href="../info_peli/info_historias.html"><img src="IMG/historiasDeMiedo.jpg" alt="" class="card-img"></a>
+      <div>
+        <a href="../data/p004/info_historias.html">
+          <img src="../data/p004/portada02_historias.jpg" alt="">
+        </a>
       </div>
-    </div>
-    <div class="card-cont">
-      <div class="card">
-        <a href="../info_peli/info_habia.html"><img src="IMG/habiaUnaVez.jpg" alt="" class="card-img"></a>
+      <div>
+        <a href="../data/p001/info_habia.html">
+          <img src="../data/p001/portada02_habia.jpg" alt="">
+        </a>
       </div>
-    </div>
+    </article>
   </section>
 
   <footer>
     <article>
-      <div id="left">
-        <img src="../img/logo.png" alt="logo">
+      <div class="flogo">
+        <img src="../res/logo.png" alt="logo">
         <span>Tu mejor opción en Peliculas</span>
       </div>
-      <div id="center">
-        <p>Links rápidos:</p>
-        <div class="twin">
+      <div class="flist">
+        <span>Links rápidos:</span>
+        <div class="twins">
           <ul>
             <li><a href="../index.html">Principal</a></li>
             <li><a href="./dulceria.html">Dulceria</a></li>
             <li><a href="./exhibicion.html">Exhibiendose</a></li>
             <li><a href="./proximos.html">Estrenos</a></li>
           </ul>
-        </div>
-        <div class="twin">
           <ul>
             <li><a href="./descuentos.html">Promociones</a></li>
             <li><a href="./galeria.html">Galeria</a></li>
@@ -81,7 +86,7 @@
           </ul>
         </div>
       </div>
-      <div id="right">
+      <div class="ftext">
         <span>Derechos Reservados &copy; 2019</span>
       </div>
     </article>
