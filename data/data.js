@@ -64,28 +64,28 @@ let data = [
     titulo: "Metallica",
     sinopsis: "Documental que conmemora el 20.º aniversario de los míticos conciertos S&M y del álbum del mismo nombre grabado junto a la Orquesta Sinfónica de San Francisco. El concierto, que se grabará en directo el 6 y el 8 de septiembre, también celebrará la inauguración del vanguardista Chase Center, una incorporación histórica al litoral de la ciudad. Este estreno cinematográfico incluirá los «clásicos» del álbum S&M de 1999, a los que se unirán las versiones sinfónicas de nuevas canciones.",
     trailer: "https://www.youtube.com/embed/TgUnVhEblxU",
-    portada: ["p006_portada01.jpg","p006_portada02.jpg"]
+    portada: ["p006_portada01.jpg", "p006_portada02.jpg"]
   }, {
     filmId: "p007",
     exhibiendose: false,
     titulo: "Musica de la Vida",
     sinopsis: "En la conflictiva Inglaterra de 1987, Javed es un adolescente de origen paquistaní, de clase obrera, que sufre racismo y penurias económicas. Sin embargo, gracias a la música de Bruce Springsteen, Javed aprende a comprender a su familia y encauzar su vida.",
     trailer: "https://www.youtube.com/embed/NGc2-Bj185A",
-    portada: ["p007_portada01.jpeg","p007_portada02.jpg"]
+    portada: ["p007_portada01.jpeg", "p007_portada02.jpg"]
   }, {
     filmId: "p008",
     exhibiendose: false,
     titulo: "Muñeco Malvado",
     sinopsis: "Una madre le regala a su hijo un muñeco por su cumpleaños, sin ser consciente de la naturaleza maligna que esconde en su interior.",
     trailer: "https://www.youtube.com/embed/OBsdejOTwrk",
-    portada: ["p008_portada01.jpg","p008_portada02.jpg"]
+    portada: ["p008_portada01.jpg", "p008_portada02.jpg"]
   }, {
     filmId: "p009",
     exhibiendose: false,
     titulo: "Agente bajo fuego",
     sinopsis: "Tras los acontecimientos que tuvieron lugar pocos años antes, el agente Mike Banning (Gerard Butler) es acusado de un intento de asesinato del presidente de los Estados Unidos. Perseguido por su propia agencia y por el FBI, Banning participa una carrera a contrarreloj en la que ha de desvelar al auténtico grupo terrorista que ha puesto se mirada sobre el Air Force One para cometer su próximo atentado. Secuela de Objetivo: Londres (2016).",
     trailer: "https://www.youtube.com/embed/0IuuhO7XjlU",
-    portada: ["p009_portada01.jpg","p009_portada02.jpg"]
+    portada: ["p009_portada01.jpg", "p009_portada02.jpg"]
   }, {
     filmId: "p010",
     exhibiendose: false,
@@ -96,6 +96,26 @@ let data = [
   }
 ];
 
+function loadAll(uri, uri2) {
+  window.addEventListener('load', () => {
+    document.tool.get('#main').innerHTML = loadCards(true, uri, uri2) + loadCards(false, uri, uri2);
+  });
+}
+
+function loadCards(exhibiendose, uri, uri2) {
+  uri = (uri) ? uri : './';
+  uri2 = (uri2) ? uri2 : '../';
+
+  let str = `<div class="separador">
+      <span>${exhibiendose ? '&#127916;Películas en cartelera&#127916;' : '&#127916;Próximos Estrenos&#127916;'}</span><hr>
+    </div><article class="cards">`;
+  data.forEach(filme => {
+    if (filme.exhibiendose === exhibiendose)
+      str += `<div><a href="${uri}informacion.html?filme=${filme.filmId}"><img src="${uri2}data/portada/${filme.portada[0]}" alt="${filme.titulo}"></a></div>`;
+  });
+  return str + '</article>';
+}
+
 function loadInfo(url) {
   window.addEventListener('load', () => {
     let vars = document.tool.decodeURL(url).var;
@@ -103,24 +123,10 @@ function loadInfo(url) {
 
     // Se muestra primero las paginas de exhibicion o estrenos
     if (vars && vars['exhibiendose']) {
-      if (vars['exhibiendose'] == 1) {
-        let str = `<div class="separador"><span>Exhibiendose</span><hr></div><article class="cards">`;
-        data.forEach(filme => {
-          if (filme.exhibiendose === true)
-            str += `<div><a href="./informacion.html?filme=${filme.filmId}"><img src="../data/portada/${filme.portada[0]}" alt="${filme.titulo}"></a></div>`;
-        });
-        main.innerHTML += str + '</article>';
-        return;
-      } else {
-        let str = `<div class="separador"><span>Proximos Estrenos</span><hr></div><article class="cards">`;
-        data.forEach(filme => {
-          if (filme.exhibiendose === false)
-            str += `<div><a href="./informacion.html?filme=${filme.filmId}"><img src="../data/portada/${filme.portada[0]}" alt="${filme.titulo}"></a></div>`;
-        });
-        main.innerHTML += str + '</article>';
-        return;
-      }
+      main.innerHTML = loadCards(vars['exhibiendose'] == 1);
+      return;
     }
+
     let filmId = (vars && vars['filme']) ? vars['filme'] : null;
     if (typeof filmId === 'string' || filmId instanceof String) {
       let dt = data.find(filme => filme.filmId == filmId);
