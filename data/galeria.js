@@ -38,9 +38,12 @@ function loadGalery(url) {
     // Para cuando no se especifica un Id en la URL se cargan 3 imagenes maximo de todas las peliculas
     if (!(typeof filmId === 'string' || filmId instanceof String)) {
       galeria.forEach(filme => {
-        let str = '<article class="cards">';
+        let str = `<div class="subtitulo"><span>${filme.titulo}</span></div><article class="cards">
+          <article class="cards">`;
         for (let i = 0; i < filme.imagenes.length && i < 3; i++) {
-          str += `<div><img src="../data/img/${filme.imagenes[i][0]}" alt="${filme.imagenes[i][1]}"></div>`;
+          str += `<div><a href="./galeria.html?filme=${filme.filmId}">
+            <img src="../data/img/${filme.imagenes[i][0]}" alt="${filme.imagenes[i][1]}">
+            </a></div>`;
         }
         main.innerHTML += str + '</article>';
       });
