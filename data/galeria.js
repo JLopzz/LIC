@@ -22,10 +22,18 @@ let galeria = [
       ["p003_img07.jpg", ""], ["p003_img08.jpg", ""]],
   }, {
     filmId: "p004",
-    imagenes: [],
+    titulo: "Historias de Miedo",
+    imagenes: [
+      ["p004_img01.jpg", ""], ["p004_img02.jpg", ""], ["p004_img03.jpg", ""],
+      ["p004_img04.jpg", ""], ["p004_img05.jpg", ""], ["p004_img06.jpg", ""],
+      ["p004_img07.jpg", ""], ["p004_img08.jpg", ""]],
   }, {
     filmId: "p005",
-    imagenes: []
+    titulo: "Ready or not",
+    imagenes: [
+      ["p005_img01.jpg", ""], ["p005_img02.jpg", ""], ["p005_img03.jpg", ""],
+      ["p005_img04.jpg", ""], ["p005_img05.jpg", ""], ["p005_img06.jpg", ""],
+      ["p005_img07.jpg", ""], ["p005_img08.jpg", ""]]
   }
 ];
 
