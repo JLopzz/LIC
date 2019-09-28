@@ -10,16 +10,18 @@
     [ "nombre_de_archivo", "descripcion de la imagen" ]
   ]
 }
+
+{
+  filmId: "p000",
+  exhibiendose: true,
+  titulo: "",
+  sinopsis: "",
+  trailer: "",
+  portada: [""]
+  }
 */
 let data = [
   {
-    filmId: "p000",
-    exhibiendose: true,
-    titulo: "",
-    sinopsis: "",
-    trailer: "",
-    portada: [""]
-  }, {
     filmId: "p001",
     exhibiendose: true,
     titulo: "Habia una vez",
@@ -102,28 +104,34 @@ function loadInfo(url) {
     // Se muestra primero las paginas de exhibicion o estrenos
     if (vars && vars['exhibiendose']) {
       if (vars['exhibiendose'] == 1) {
-        main.innerHTML = ``;
-      } else { }
-
+        let str = `<div class="separador"><span>Exhibiendose</span><hr></div><article class="cards">`;
+        data.forEach(filme => {
+          if (filme.exhibiendose === true)
+            str += `<div><a href="./informacion.html?filme=${filme.filmId}"><img src="../data/portada/${filme.portada[0]}" alt="${filme.titulo}"></a></div>`;
+        });
+        main.innerHTML += str + '</article>';
+        return;
+      } else {
+        let str = `<div class="separador"><span>Proximos Estrenos</span><hr></div><article class="cards">`;
+        data.forEach(filme => {
+          if (filme.exhibiendose === false)
+            str += `<div><a href="./informacion.html?filme=${filme.filmId}"><img src="../data/portada/${filme.portada[0]}" alt="${filme.titulo}"></a></div>`;
+        });
+        main.innerHTML += str + '</article>';
+        return;
+      }
     }
-    if (!(typeof filmId === 'string' || filmId instanceof String)) {
+    let filmId = (vars && vars['filme']) ? vars['filme'] : null;
+    if (typeof filmId === 'string' || filmId instanceof String) {
+      let dt = data.find(filme => filme.filmId == filmId);
+      main.innerHTML = `<div class="separador"><span>'${dt.titulo}'</span><hr></div>
+        <div class="poster"><img src="../data/portada/${dt.portada[0]}" alt="Portada de ${dt.titulo}"></div>
+        <div class="video"><iframe width="560" height="315" src="${dt.trailer}" frameborder="0" allow="accelerometer; autoplay; encrypted-media" allowfullscreen></iframe></div>
+        <div class="info"><h2>Sinopsis</h2><p>${dt.sinopsis}</p><a href="./galeria.html?filme=${dt.filmId}"><input type="button" value="Ver Galeria de imagenes"></a></div>
+      `;
       return;
     }
 
-    let filmId = (vars && vars['filme']) ? vars['filme'] : null;
-    if (typeof filmId === 'string' || filmId instanceof String) {
-      data.forEach(filme => {
-        if (filme.filmId == filmId) {
-          main.innerHTML = `
-<div class="poster"><img src="../data/portada/${filme.portada[0]}" alt="Portada de ${filme.titulo}"></div>
-<div class="video"><iframe width="560" height="315" src="${filme.trailer}" frameborder="0" allow="accelerometer; autoplay; encrypted-media" allowfullscreen></iframe></div>
-<div class="info"><h2>Sinopsis</h2><p>${filme.sinopsis}</p><a href="./galeria.html?filme=${filme.filmId}"><input type="button" value="Ver Galeria de imagenes"></a></div>
-    `;
-          return;
-        }
-      });
-    }
-
-    main.innerHTML = '<div class="subtitulo"><span>Datos no encontrados</span><hr></div>';
+    main.innerHTML = '<div class="subtitulo"><span>Datos no encontrados</span></div>';
   }, false);
 }
