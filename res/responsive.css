@@ -67,12 +67,17 @@
   position: relative;
   width: 90%;
 }
-
+#main article.cards div iframe {
+  position: relative;
+  display: block;
+  width: 90%;
+}
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
 
   #main article.cards div { width: 45%; }
+  #main article.cards .double { width: 90%; }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */

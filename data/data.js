@@ -131,9 +131,12 @@ function loadInfo(url) {
     if (typeof filmId === 'string' || filmId instanceof String) {
       let dt = data.find(filme => filme.filmId == filmId);
       main.innerHTML = `<div class="separador"><span>'${dt.titulo}'</span><hr></div>
-        <div class="poster"><img src="../data/portada/${dt.portada[0]}" alt="Portada de ${dt.titulo}"></div>
-        <div class="video"><iframe width="560" height="315" src="${dt.trailer}" frameborder="0" allow="accelerometer; autoplay; encrypted-media" allowfullscreen></iframe></div>
-        <div class="info"><h2>Sinopsis</h2><p>${dt.sinopsis}</p><a href="./galeria.html?filme=${dt.filmId}"><input type="button" value="Ver Galeria de imagenes"></a></div>
+        <article class="cards">
+        <div><img src="../data/portada/${dt.portada[0]}" alt="Portada de ${dt.titulo}"></div>
+        <div><h2>Sinopsis</h2><span>${dt.sinopsis}</span></div>
+        <div class="double"><iframe src="${dt.trailer}" frameborder="0" allow="accelerometer; autoplay; encrypted-media" allowfullscreen></iframe></div>
+        <div><a href="./galeria.html?filme=${dt.filmId}"><input type="button" value="Ver Galeria de imagenes"></a></div>
+        </article>
       `;
       return;
     }
