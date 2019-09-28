@@ -5,9 +5,9 @@
   titulo: Titulo
   sinopsis: Texto
   trailer: url del video-trailer
-  portada: [ "ubicacion" ]
+  portada: [ "nombre_de_archivo" ]
   galeria: [
-    [ "ubicacion", "descripcion de la imagen" ]
+    [ "nombre_de_archivo", "descripcion de la imagen" ]
   ]
 }
 */
@@ -56,6 +56,41 @@ let data = [
     trailer: "https://www.youtube.com/embed/w6JqFGaN6S0",
     portada: ["p005_portada01.jpg"]
 
+  }, {
+    filmId: "p006",
+    exhibiendose: false,
+    titulo: "Metallica",
+    sinopsis: "Documental que conmemora el 20.º aniversario de los míticos conciertos S&M y del álbum del mismo nombre grabado junto a la Orquesta Sinfónica de San Francisco. El concierto, que se grabará en directo el 6 y el 8 de septiembre, también celebrará la inauguración del vanguardista Chase Center, una incorporación histórica al litoral de la ciudad. Este estreno cinematográfico incluirá los «clásicos» del álbum S&M de 1999, a los que se unirán las versiones sinfónicas de nuevas canciones.",
+    trailer: "https://www.youtube.com/embed/TgUnVhEblxU",
+    portada: ["p006_portada01.jpg","p006_portada02.jpg"]
+  }, {
+    filmId: "p007",
+    exhibiendose: false,
+    titulo: "Musica de la Vida",
+    sinopsis: "En la conflictiva Inglaterra de 1987, Javed es un adolescente de origen paquistaní, de clase obrera, que sufre racismo y penurias económicas. Sin embargo, gracias a la música de Bruce Springsteen, Javed aprende a comprender a su familia y encauzar su vida.",
+    trailer: "https://www.youtube.com/embed/NGc2-Bj185A",
+    portada: ["p007_portada01.jpeg","p007_portada02.jpg"]
+  }, {
+    filmId: "p008",
+    exhibiendose: false,
+    titulo: "Muñeco Malvado",
+    sinopsis: "Una madre le regala a su hijo un muñeco por su cumpleaños, sin ser consciente de la naturaleza maligna que esconde en su interior.",
+    trailer: "https://www.youtube.com/embed/OBsdejOTwrk",
+    portada: ["p008_portada01.jpg","p008_portada02.jpg"]
+  }, {
+    filmId: "p009",
+    exhibiendose: false,
+    titulo: "Agente bajo fuego",
+    sinopsis: "Tras los acontecimientos que tuvieron lugar pocos años antes, el agente Mike Banning (Gerard Butler) es acusado de un intento de asesinato del presidente de los Estados Unidos. Perseguido por su propia agencia y por el FBI, Banning participa una carrera a contrarreloj en la que ha de desvelar al auténtico grupo terrorista que ha puesto se mirada sobre el Air Force One para cometer su próximo atentado. Secuela de Objetivo: Londres (2016).",
+    trailer: "https://www.youtube.com/embed/0IuuhO7XjlU",
+    portada: ["p009_portada01.jpg","p009_portada02.jpg"]
+  }, {
+    filmId: "p010",
+    exhibiendose: false,
+    titulo: "Inesperado",
+    sinopsis: "Abby Johnson (Ashley Bratcher) es una de las directoras más jóvenes de las clínicas \"Planned Parenthood\" que existen en la nación. Ejerciendo ese cargo ha estado involucrada hasta en 22.000 abortos y ha aconsejado a innumerables mujeres con respecto a la toma de decisiones relacionadas con la reproducción. Su pasión por la materia la llevaría a convertirse en la portavoz de la franquicia, luchando por establecer la legislación en que la ha que creído firmemente desde su adolescencia. Sin embargo, un día su perspectiva toma un inesperado rumbo tras presenciar algo que la marcará de por vida.",
+    trailer: "https://www.youtube.com/embed/rlEtDbmRh5g",
+    portada: ["p010_portada01.jpg"]
   }
 ];
 
