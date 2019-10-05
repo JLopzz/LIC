@@ -77,11 +77,26 @@ header #menu li {
 }
 header #menu li a {
     font-size: 1.3rem;
+    margin: 0%;
   color: inherit;
 }
 header #menu li:hover {
   color: #f6f5f5;
   background-color: #981914;
+}
+/* --------------- menu desplegable --------------- */
+#btn-menu{
+  display: none;
+  
+}
+header label{
+  display: none;
+  width: 48px;
+  height: 48px;
+}
+header label:hover{
+  cursor: pointer;
+  background: rgba(0, 0,0, 0.5);
 }
 
 /* --------------- Footer --------------- */
@@ -119,11 +134,37 @@ footer .flogo img {
 footer .flist span { color: #981914; }
 
 
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-  header #menu{ background: green; }
 
 /* ----- Header ----- */
+@media only screen and (max-width:632px){
+  header label{
+    display: block;
+  }
+
+  header #logo{
+    display: none;
+  }
+  header div ul{
+    position: relative;
+    background: black;
+    
+    
+  }
+  header div ul li{
+    flex-direction: column-reverse;
+  }
+
+
+
+}
+
+@media only screen and (min-width: 600px) {
+header #menu{ background: green; }
+
+/* ----- Header ----- */
+
 
 /* ----- Footer ----- */
   footer article { height: 140px; }
