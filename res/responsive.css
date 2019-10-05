@@ -57,7 +57,7 @@
   display: inline-block;
   width: 90%;
   margin: .5rem;
-  padding: 1rem .5rem;
+  padding: 1.5rem 1rem;
   border-radius: 10px;
   text-align: center;
   vertical-align: text-top;
@@ -65,12 +65,15 @@
 }
 #main article.cards div img {
   position: relative;
-  width: 90%;
+  width: 100%;
 }
 #main article.cards div iframe {
   position: relative;
   display: block;
-  width: 90%;
+  width: 100%;
+}
+#main .btn-Gale{
+  border-radius:5px;
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */

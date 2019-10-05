@@ -135,7 +135,7 @@ function loadInfo(url) {
         <div><img src="../data/portada/${dt.portada[0]}" alt="Portada de ${dt.titulo}"></div>
         <div><h2>Sinopsis</h2><span>${dt.sinopsis}</span></div>
         <div class="double"><iframe src="${dt.trailer}" frameborder="0" allow="accelerometer; autoplay; encrypted-media" allowfullscreen></iframe></div>
-        <div><a href="./galeria.html?filme=${dt.filmId}"><input type="button" value="Ver Galeria de imagenes"></a></div>
+        <div><a href="./galeria.html?filme=${dt.filmId}"><input type="button" value="Ver Galeria de imagenes" class="btn-Gale"></a></div>
         </article>
       `;
       return;

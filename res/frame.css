@@ -161,12 +161,10 @@ footer .flist span { color: #981914; }
 }
 
 @media only screen and (min-width: 600px) {
-header #menu{ background: green; }
+  /* ----- Header ----- */
+  header #menu{ background: green; }
 
-/* ----- Header ----- */
-
-
-/* ----- Footer ----- */
+  /* ----- Footer ----- */
   footer article { height: 140px; }
   footer article > div { display: inline-block; }
   footer article > div:nth-child(1),
