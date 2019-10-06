@@ -20,5 +20,29 @@ document.tool = {
       });
     }
     return { url: str[0], var: vars };
+  },
+
+  /* Funciones */
+  filter({
+    data = [],
+    init = 0,
+    quantity = 6,
+    filter = () => true,
+  } = {}) {
+    // Condiciones de variables necesarias
+    if (!Array.isArray(data) || data.length < 1) return [];
+    if (init < 0 || quantity < 1 || quantity > 20) return [];
+
+    let res = [], valid = data.filter(filter);
+
+    for (let i = init; i < valid.length && i < init + quantity; i++) {
+      res = [...res, valid[i]];
+    }
+
+    return res;
+  },
+
+  constructCards() {
+    
   }
 };

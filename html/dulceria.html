@@ -9,6 +9,8 @@
   <link rel="shortcut icon" href="../res/logo.png" type="image/x-icon">
   <link rel="stylesheet" href="../res/frame.css">
   <link rel="stylesheet" href="../res/responsive.css">
+  <script src="../res/tool.js"></script>
+  <script src="../data/alimentos.js" onload="loadFood();"></script>
 </head>
 
 <body>
@@ -38,57 +40,20 @@
       <span>Ven y prueba nuestros deliciosos productos a increíbles precios</span>
     </div>
     <article class="principal">
-      <img src="../res/img/dulceria.jpg" alt="Palomitas">
+      <img src="../res/img_dulceria.jpg" alt="Palomitas">
     </article>
+
     <div class="separador">
-      <span>&#127867;Combos y Productos disponibles&#127867;</span>
+      <span>&#127867;Combos&#127867;</span>
       <hr>
     </div>
+    <article class="cards" id="combos"></article>
 
-    <article class="cards">
-      <div>
-        <img src="../res/img/dulceria_combo01.png" alt="Combo familiar">
-        <span>
-          <p>¡Nada mejor que compartir con la familia! Ven y prueba nuestro combo familiar.</p>
-          <p class="precio">$8.99</p>
-        </span>
-      </div>
-      <div>
-        <img src="../res/img/dulceria_combo02.png" alt="para 2">
-        <span>
-          <p>Si vienes acompañado este es el combo para ti. Dos sandwiches acompañados con dos sodas.</p>
-          <p class="precio">$3.00</p>
-        </span>
-      </div>
-      <div>
-        <img src="../res/img/dulceria_combo03.png" alt="Para 2 Opcion 2">
-        <span>
-          <p>Si tú y tu acompañante tienen mucha habre, prueba este fantastico combo</p>
-          <p class="precio">$5.50</p>
-        </span>
-      </div>
-      <div>
-        <img src="../res/img/dulceria_combo04.png" alt="individual">
-        <span>
-          <p>Este combo es la mejor ocpion si disfrutas de un tiempo a solas</p>
-          <p class="precio">$2.50</p>
-        </span>
-      </div>
-      <div>
-        <img src="../res/img/dulceria_combo05.png" alt="nachos">
-        <span>
-          <p>Siempre se antojan unos ricos nachos, y estos son deliciosos</p>
-          <p class="precio">$1.99</p>
-        </span>
-      </div>
-      <div>
-        <img src="../res/img/dulceria_golosinas.jpg" alt="dulces">
-        <span>
-          <p>Si buscas algo dulce, nuestra seleccion de golosinas te sorprenderá.</p>
-          <p class="precio">$2.99</p>
-        </span>
-      </div>
-    </article>
+    <div class="separador">
+      <span>&#127867;Productos&#127867;</span>
+      <hr>
+    </div>
+    <article class="cards" id="productos"></article>
   </section>
 
   <footer>
