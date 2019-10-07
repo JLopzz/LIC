@@ -12,7 +12,70 @@ let alimentos = {
       precio: 3.99,
       descripcion: "Palomitas",
       img: ["producto02.jpg", ""]
-    }
+    },
+    {
+     productoId: "pr003",
+     titulo: "Pizza",
+     precio: 2.99,
+     descripcion: "Pizzas personales muy deliciosas, quedarás satisfecho.",
+     img: ["producto03.png", ""]
+   },
+   {
+    productoId: "pr004",
+    titulo: "Papas",
+    precio: 1.00,
+    descripcion: "Las papas fritas son el mejor complemento ligero y salado para saciar el hambre.",
+    img: ["producto04.png", ""]
+  },
+  {
+   productoId: "pr005",
+   titulo: "Café",
+   precio: 1.50,
+   descripcion: "Desde expresos, hasta amaretos, prueba nuestros ricos cafes.",
+   img: ["producto05.png", ""]
+ },
+ {
+  productoId: "pr006",
+  titulo: "Chocolates",
+  precio: 1.50,
+  descripcion: "Nada como el chocolate para disfrutar de una buena película.",
+  img: ["producto06.png", ""]
+},
+{
+ productoId: "pr007",
+ titulo: "Crepas",
+ precio: 2.00,
+ descripcion: "Prueba ya nuestras nuevas crepas, especialidades variadas.",
+ img: ["producto07.png", ""]
+},
+{
+ productoId: "pr008",
+ titulo: "Smoothies",
+ precio: 1.75,
+ descripcion: "La bebida que necesitas para refrescar tu día y tu ánimo.",
+ img: ["producto08.png", ""]
+},
+{
+ productoId: "pr009",
+ titulo: "Helados",
+ precio: 1.00,
+ descripcion: "Nuestros helados son los mejores, no te quedes sin probarlos. Porción de 12 oz.",
+ img: ["producto09.jpg", ""]
+},
+{
+ productoId: "pr010",
+ titulo: "Paleta",
+ precio: 0.75,
+ descripcion: "Si tienes ganas de algo dulce y rico, dale una oportunidad a nuestras deliciosas paletas.",
+ img: ["producto10.jpg", ""]
+},
+{
+ productoId: "pr011",
+ titulo: "Cheese cake",
+ precio: 2.00,
+ descripcion: "Porción sw nuestra deliciosa seleccion de pasteles de queso.",
+ img: ["producto11.png", ""]
+},
   ],
   combos: [
     {
