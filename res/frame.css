@@ -150,7 +150,7 @@ footer .flist span { color: #981914; }
 /* Small devices (portrait tablets and large phones, 600px and up) */
 
 /* ----- Header ----- */
-@media only screen and (max-width:632px){
+@media only screen and (max-width:725px){
   header{ height: 50px; }
   header label{ display: block; }
 
