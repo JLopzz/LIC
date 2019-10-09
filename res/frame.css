@@ -146,14 +146,19 @@ footer .flist span { color: #981914; }
   header #logo{
     display: none;
   }
-  header div ul{
-    position: relative;
+  header #menu{
+    position: absolute;
     background: black;
+    margin-left: -70%;
     
     
   }
   header div ul li{
-    flex-direction: column-reverse;
+    flex-direction: column;
+  }
+
+  #btn-menu:checked ~ #menu{
+    margin: 0%;
   }
 
 
