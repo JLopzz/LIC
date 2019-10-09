@@ -162,11 +162,16 @@ footer .flist span { color: #981914; }
     position: absolute;
     background: black;
     margin-left: -70%;
+    transition: all 0.5s;
     
     
   }
   header div ul li{
-    flex-direction: column;
+    width: 100%;
+  }
+  header div ul{
+    height: 100px;
+    /*flex-direction: column;*/
   }
 
   #btn-menu:checked ~ #menu{
