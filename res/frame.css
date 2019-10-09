@@ -23,6 +23,18 @@ ul li a[href="#"] {
   color: #f6f5f5 !important;
   background-color: #981914;
 }
+#btnCar:link, #btnCar:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+}
+
+#btnCar:hover, #btnCar:active {
+  background-color: red;
+}
 
 .twins {
   position: relative;
