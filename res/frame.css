@@ -139,35 +139,33 @@ footer .flist span { color: #981914; }
 
 /* ----- Header ----- */
 @media only screen and (max-width:632px){
-  header label{
-    display: block;
-  }
+  header{ height: 50px; }
+  header label{ display: block; }
 
-  header #logo{
-    display: none;
-  }
+  header #logo{ display: none; }
   header #menu{
     position: absolute;
-    background: black;
-    margin-left: -70%;
-    
-    
+    display: none;  
+    height: auto;
   }
-  header div ul li{
-    flex-direction: column;
+  header #menu li{ display: block; }
+  header div ul li{ flex-direction: column; }
+  header #menu ul{
+    background:#F1E9E9;
+    transform: translateX(0);
+    z-index: 200;
+    box-shadow: 0 0 10px 0 #f6f6f5f1;
+    width: 50%;
   }
-
-  #btn-menu:checked ~ #menu{
-    margin: 0%;
+  #btn-menu{
+    display:block;
+    cursor: pointer;
   }
-
-
 
 }
 
 @media only screen and (min-width: 600px) {
   /* ----- Header ----- */
-  header #menu{ background: green; }
 
   /* ----- Footer ----- */
   footer article { height: 140px; }
@@ -182,15 +180,12 @@ footer .flist span { color: #981914; }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-  header #menu{ background: blue; }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-  header #menu{ background: orange; }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-  header #menu{ background: pink; }
 }

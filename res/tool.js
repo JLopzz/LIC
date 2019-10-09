@@ -46,3 +46,11 @@ document.tool = {
     
   }
 };
+
+//funcion para menu desplegable
+function showMenu(){
+  var menuList = document.getElementById('menu');
+  var style = menuList.style.display;
+  style=='none'||style==''?
+    menuList.style.display="block":menuList.style.display='none';
+}
