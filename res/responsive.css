@@ -1,5 +1,3 @@
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {}
 /* Mobile first */
 #main {
   padding: 1rem;
@@ -52,10 +50,23 @@
   display: block;
   position: relative;
 }
-
-#main article.cards div {
+#main article.cards .main-content{
+  display:flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap:wrap;
+  width: 100%;
+}
+#main article.cards .main-content .card-content{
+  display: flex;
+  flex-wrap: wrap;
+  width: 45%;
+}
+.card-content .card-body{
+  width: 100%!important;
+}
+.card-body {
   display: inline-block;
-  width: 90%;
   margin: .5rem;
   padding: 1.5rem 1rem;
   border-radius: 10px;
@@ -63,11 +74,11 @@
   vertical-align: text-top;
   background-color:rgba(0,0,0,0.2);
 }
-#main article.cards div img {
+#main article.cards .main-content .card-body img {
   position: relative;
   width: 100%;
 }
-#main article.cards div iframe {
+#main article.cards .double iframe {
   position: relative;
   display: block;
   width: 100%;
@@ -75,28 +86,48 @@
 #main .btn-Gale{
   border-radius:5px;
 }
+#calificacion{
+  display: flex;
+  flex-wrap:nowrap;
+  justify-content: center;
+}
+.star{
+  background-image: url(../res/img/empty_star.png);
+  background-size: cover;
+  width: 30px !important;
+  height:30px !important;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  #main article.cards .main-content .card-body,
+  #main article.cards .main-content .card-content{
+    width: 100%;
+  }
+}
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-
-  #main article.cards div { width: 45%; }
-  #main article.cards .double { width: 90%; }
+  #main article.cards .double { width: 100%; }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-
   #main .subtitulo { width: 75%; }
   #main article.principal img { width: 60%; }
+  #main article.cards .main-content .card-body,
+  #main article.cards .main-content .card-content{
+    width: 45%;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-
   #main .subtitulo { width: 60%; }
   #main article.principal img { width: 40%; }
-
-  #main article.cards div { width: 30%; }
+  #main article.cards .main-content .card-body,
+  #main article.cards .main-content .card-content{
+    width: 30%;
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */

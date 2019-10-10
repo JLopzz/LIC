@@ -36,70 +36,52 @@
             </ul>
           </div>
     </header>
-
     <br>
 
     <section id="main">
-
-                    <h2>Realizar Compra</h2>
-                    <form id="procesar-pago" action="#">
-
-                            <label for="cliente">Cliente :</label>
-                                <input type="text" class="form-control" id="cliente"
-                                    placeholder="Ingresa nombre cliente">
-
-
-                            <label for="email">Correo :</label>
-                                <input type="text" class="form-control" id="correo" placeholder="Ingresa tu correo">
-
-<br>
-<br>
-<br>
-<br>
-                        <div id="carrito" class="table-responsive">
-                            <table class="table" id="lista-compra">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">Imagen</th>
-                                        <th scope="col">Nombre</th>
-                                        <th scope="col">Precio</th>
-                                        <th scope="col">Cantidad</th>
-                                        <th scope="col">Sub Total</th>
-                                        <th scope="col">Eliminar</th>
-                                    </tr>
-
-                                </thead>
-                                <tbody>
-
-                                </tbody>
-                                <tr>
-                                    <th colspan="4" scope="col" class="text-right">SUB TOTAL :</th>
-                                    <th scope="col">
-                                        <p id="subtotal"></p>
-                                    </th>
-                                    <!-- <th scope="col"></th> -->
-                                </tr>
-                                <tr>
-                                    <th colspan="4" scope="col" class="text-right">TOTAL :</th>
-                                    <th scope="col">
-                                        <p id="total"></p>
-                                    </th>
-                                    <!-- <th scope="col"></th> -->
-                                </tr>
-
-                            </table>
-                        </div>
-
-                        <div id="botones">
-                            <div class="boton1">
-                                <a href="./dulceria.html" class="btncompras" id="seguir-comprando">Seguir comprando</a>
-                            </div>
-                            <div class="boton2">
-                                <a href="#" class="btncompras" id="realizar-compra">Realizar compra</a>
-                            </div>
-                        </div>
-                    </form>
-
+      <h2>Realizar Compra</h2>
+      <form id="procesar-pago" action="#">
+        <label for="cliente">Cliente :</label>
+        <input type="text" class="form-control" id="cliente" placeholder="Ingresa nombre cliente">
+        <label for="email">Correo :</label>
+        <input type="text" class="form-control" id="correo" placeholder="Ingresa tu correo"><br><br><br><br>
+        <div id="carrito" class="table-responsive">
+          <table class="table" id="lista-compra">
+              <thead>
+                <tr>
+                  <th scope="col">Imagen</th>
+                  <th scope="col">Nombre</th>
+                  <th scope="col">Precio</th>
+                  <th scope="col">Cantidad</th>
+                  <th scope="col">Sub Total</th>
+                  <th scope="col">Eliminar</th>
+                </tr>
+              </thead>
+                <tr>
+                  <th colspan="4" scope="col" class="text-right">SUB TOTAL :</th>
+                  <th scope="col">
+                      <p id="subtotal"></p>
+                  </th>
+                  <!-- <th scope="col"></th> -->
+                </tr>
+                <tr>
+                  <th colspan="4" scope="col" class="text-right">TOTAL :</th>
+                  <th scope="col">
+                    <p id="total"></p>
+                  </th>
+                  <!-- <th scope="col"></th> -->
+                </tr>
+              </table>
+          </div>
+          <div id="botones">
+            <div class="boton1">
+              <a href="./dulceria.html" class="btncompras" id="seguir-comprando">Seguir comprando</a>
+            </div>
+            <div class="boton2">
+              <a href="#" class="btncompras" id="realizar-compra">Realizar compra</a>
+            </div>
+          </div>
+      </form>
     </section>
 
     <footer>
