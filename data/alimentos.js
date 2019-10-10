@@ -127,7 +127,7 @@ function loadFood() {
         let div = document.createElement('div');
         let BotonAgregar = document.createElement('button');
         BotonAgregar.textContent = '+';
-        BotonAgregar.setAttribute('marcador', alimentos.productos['productoId']);
+        BotonAgregar.setAttribute('marcador', id);
         BotonAgregar.addEventListener('click', anyadirCarrito);
 
         div.appendChild(Object.assign(document.createElement('h3'), { innerText: titulo }));
@@ -135,7 +135,14 @@ function loadFood() {
         div.appendChild(Object.assign(document.createElement('img'), { src: `../data/alimentos/${imagen[0]}`, alt: imagen[1] }));
         div.appendChild(Object.assign(document.createElement('span'), { innerText: descripcion }));
         div.appendChild(BotonAgregar);
-
+        
+        let infoProducto={
+          Imagen : imagen,
+          Titulo: titulo,
+          Precio: precio,
+          Id: id,
+          Cantidad: 1
+      }
 
         field.appendChild(div);
         function anyadirCarrito () {
@@ -143,6 +150,20 @@ function loadFood() {
           carrito.push(this.getAttribute('marcador'));
           localStorage.setItem('carrito',JSON.stringify(carrito));
         }
+        
+        function obtenerProductosLocalStorage(){
+          let productoLS;
+  
+          //Comprobar si hay algo en LS
+          if(localStorage.getItem('carrito') === null){
+              productoLS = [];
+          }
+          else {
+              productoLS = JSON.parse(localStorage.getItem('carrito'));
+          }
+          return productoLS;
+      }
+        
       });
     }
   });
