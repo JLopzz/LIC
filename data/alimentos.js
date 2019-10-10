@@ -10,7 +10,7 @@ let alimentos = {
       productoId: "pr002",
       titulo: "Palomitas",
       precio: 3.99,
-      descripcion: "Palomitas",
+      descripcion: "Deliciosas palomitas caramelizadas para compartir.",
       img: ["producto02.jpg", ""]
     },
     {
@@ -73,7 +73,7 @@ let alimentos = {
       productoId: "pr011",
       titulo: "Cheese cake",
       precio: 2.00,
-      descripcion: "Porción sw nuestra deliciosa seleccion de pasteles de queso.",
+      descripcion: "Porción de nuestra deliciosa seleccion de pasteles de queso.",
       img: ["producto11.png", ""]
     }
   ],
@@ -111,7 +111,7 @@ let alimentos = {
     }
   ]
 };
-
+let carrito = []
 function loadFood() {
   window.addEventListener('load', () => {
     for (const [data, field] of [
@@ -125,14 +125,26 @@ function loadFood() {
         let { titulo, precio, descripcion, img: imagen } = dt;
 
         let div = document.createElement('div');
+        let BotonAgregar = document.createElement('button');
+        BotonAgregar.textContent = '+';
+        BotonAgregar.setAttribute('marcador', alimentos.productos['productoId']);
+        BotonAgregar.addEventListener('click', anyadirCarrito);
 
         div.appendChild(Object.assign(document.createElement('h3'), { innerText: titulo }));
         //div.appendChild(Object.assign());
         div.appendChild(Object.assign(document.createElement('img'), { src: `../data/alimentos/${imagen[0]}`, alt: imagen[1] }));
         div.appendChild(Object.assign(document.createElement('span'), { innerText: descripcion }));
+        div.appendChild(BotonAgregar);
+
 
         field.appendChild(div);
+        function anyadirCarrito () {
+            // Anyadimos el Nodo a nuestro carrito
+            carrito.push(this.getAttribute('marcador'));
+            localStorage.setItem('carrito',JSON.stringify(carrito));
+        }
       });
     }
   });
+
 }
