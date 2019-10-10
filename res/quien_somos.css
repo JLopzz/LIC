@@ -12,5 +12,9 @@
     border-radius:50px;
 }
 .mapa ul, .mapa li{
-    color:#981914
+    color:#981914;
+}
+
+section #main .logouni{
+border-radius: 10px;
 }

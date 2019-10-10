@@ -150,7 +150,7 @@ footer .flist span { color: #981914; }
 /* Small devices (portrait tablets and large phones, 600px and up) */
 
 /* ----- Header ----- */
-@media only screen and (max-width:725px){
+@media only screen and (max-width:750px){
   header{ height: 50px; }
   header label{ display: block; }
 
@@ -159,6 +159,7 @@ footer .flist span { color: #981914; }
     position: absolute;
     display: none;  
     height: auto;
+    transition: all 0.5s;
   }
   header #menu li{ display: block; }
   header div ul li{ flex-direction: column; }
