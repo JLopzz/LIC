@@ -57,10 +57,20 @@
   flex-wrap:wrap;
   width: 100%;
 }
+#main article.cards article.cards div img{
+  width: 40%;
+  margin:1%;
+}
 #main article.cards .main-content .card-content{
   display: flex;
   flex-wrap: wrap;
   width: 45%;
+}
+#main article.cards .card-body{
+  width: 30%;
+}
+#main article.cards .card-body img{
+  width:100%;
 }
 .card-content .card-body{
   width: 100%!important;

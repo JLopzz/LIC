@@ -49,7 +49,7 @@ function loadGalery(url) {
         let str = `<div class="subtitulo"><span>${filme.titulo}</span></div><article class="cards">
           <article class="cards">`;
         for (let i = 0; i < filme.imagenes.length && i < 3; i++) {
-          str += `<div><a href="./galeria.html?filme=${filme.filmId}">
+          str += `<div class="card-body"><a href="./galeria.html?filme=${filme.filmId}">
             <img src="../data/img/${filme.imagenes[i][0]}" alt="${filme.imagenes[i][1]}">
             </a></div>`;
         }
@@ -63,7 +63,7 @@ function loadGalery(url) {
       if (filme.filmId == filmId) {
         let str = `<div class="subtitulo"><span>${filme.titulo}</span></div><article class="cards">`;
         filme.imagenes.forEach(img => {
-          str += `<div><img src="../data/img/${img[0]}" alt="${img[1]}"></div>`;
+          str += `<div class="card-body"><img src="../data/img/${img[0]}" alt="${img[1]}"></div>`;
         });
         main.innerHTML += str + '</article>';
         return;
