@@ -111,6 +111,9 @@ window.onload = function () {
                     miNodoCardBody.appendChild(miNodoBoton);
                     miNodo.appendChild(miNodoCardBody);
                     $items.appendChild(miNodo);
+                    $items.appendChild(Object.assign(document.createElement('br')));
+                    $items.appendChild(Object.assign(document.createElement('br')));
+                    $items.appendChild(Object.assign(document.createElement('br')));
                 }
             }
             function obtener_localstorage() {

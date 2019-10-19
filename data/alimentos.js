@@ -133,8 +133,9 @@ function loadFood() {
         div.appendChild(Object.assign(document.createElement('h3'), { innerText: titulo }));
         //div.appendChild(Object.assign());
         div.appendChild(Object.assign(document.createElement('img'), { src: `../data/alimentos/${imagen[0]}`, alt: imagen[1] }));
+        div.appendChild(Object.assign(document.createElement('br')));
         div.appendChild(Object.assign(document.createElement('span'), { innerText: descripcion }));
-        div.appendChild(BotonAgregar);
+        div.className="card-body"
         
         let infoProducto={
           Imagen : imagen,
@@ -142,40 +143,26 @@ function loadFood() {
           Precio: precio,
           Id: id,
           Cantidad: 1
-      }
+        }
 
         field.appendChild(div);
         function anyadirCarrito () {
-             let productosLS;
-        productosLS = obtenerProductosLocalStorage();
-        productosLS.forEach(function (productoLS){
-            if(productoLS.Id === infoProducto.Id){
-                productosLS = productoLS.Id;
-            }
-        });
-
-        if(productosLS === infoProducto.Id){
-          alert('El producto ya está agregado');
-        }
-        else {
-            // Anyadimos el Nodo a nuestro carrito
-            carrito.push(infoProducto);
-            localStorage.setItem('carrito',JSON.stringify(carrito));
-              }
+          // Añadimos el Nodo a nuestro carrito
+          carrito.push(this.getAttribute('marcador'));
+          localStorage.setItem('carrito',JSON.stringify(carrito));
         }
         
         function obtenerProductosLocalStorage(){
           let productoLS;
-  
           //Comprobar si hay algo en LS
           if(localStorage.getItem('carrito') === null){
-              productoLS = [];
+            productoLS = [];
           }
           else {
-              productoLS = JSON.parse(localStorage.getItem('carrito'));
+            productoLS = JSON.parse(localStorage.getItem('carrito'));
           }
           return productoLS;
-      }
+        }
         
       });
     }
