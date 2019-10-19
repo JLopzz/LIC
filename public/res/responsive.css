@@ -1,22 +1,22 @@
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {}
 /* Mobile first */
-#main {
+.container {
   padding: 1rem;
   text-align: center;
 }
 
-#main > * { margin-top: 2rem; }
-#main > *:nth-child(1) { margin-top: 1rem; }
+.container > * { margin-top: 2rem; }
+.container > *:nth-child(1) { margin-top: 1rem; }
 
 /* ---------- Separador ---------- */
-#main .separador {}
-#main .separador hr {
+.container .separador {}
+.container .separador hr {
   position: relative;
   bottom: 1rem;
   border: 2px solid #f6f5f5;
 }
-#main .separador span {
+.container .separador span {
   position: relative;
   z-index: 100;
   padding: .3rem;
@@ -26,14 +26,14 @@
 }
 
 /* ---------- Subtitulo ---------- */
-#main .subtitulo {
+.container .subtitulo {
   display: inline-block;
   padding: 1rem 2rem;
   width: 90%;
   border-radius: 25px;
   background: rgba(0, 0, 0, 0.4);
 }
-#main .subtitulo span {
+.container .subtitulo span {
   line-height: 1.3rem;
   font-size: 1.3rem;
   font-weight: bolder;
@@ -41,19 +41,19 @@
 }
 
 /* ---------- Principal ---------- */
-#main article.principal {}
-#main article.principal img {
+.container article.principal {}
+.container article.principal img {
   width: 80%;
   border-radius: 1.4rem;
 }
 
 /* ---------- Tarjetas ---------- */
-#main article.cards {
+.container article.cards {
   display: block;
   position: relative;
 }
 
-#main article.cards div {
+.container article.cards div {
   display: inline-block;
   width: 90%;
   margin: .5rem;
@@ -63,40 +63,40 @@
   vertical-align: text-top;
   background-color:rgba(0,0,0,0.2);
 }
-#main article.cards div img {
+.container article.cards div img {
   position: relative;
   width: 100%;
 }
-#main article.cards div iframe {
+.container article.cards div iframe {
   position: relative;
   display: block;
   width: 100%;
 }
-#main .btn-Gale{
+.container .btn-Gale{
   border-radius:5px;
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
 
-  #main article.cards div { width: 45%; }
-  #main article.cards .double { width: 90%; }
+  .container article.cards div { width: 45%; }
+  .container article.cards .double { width: 90%; }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
 
-  #main .subtitulo { width: 75%; }
-  #main article.principal img { width: 60%; }
+  .container .subtitulo { width: 75%; }
+  .container article.principal img { width: 60%; }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
 
-  #main .subtitulo { width: 60%; }
-  #main article.principal img { width: 40%; }
+  .container .subtitulo { width: 60%; }
+  .container article.principal img { width: 40%; }
 
-  #main article.cards div { width: 30%; }
+  .container article.cards div { width: 30%; }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */

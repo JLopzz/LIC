@@ -9,8 +9,16 @@
   <link rel="shortcut icon" href="./res/logo.png" type="image/x-icon">
   <link rel="stylesheet" href="./res/frame.css">
   <link rel="stylesheet" href="./res/responsive.css">
-  <script src="./res/tool.js"></script>
-  <script src="./data/data.js" onload="loadAll('./html/','./');"></script>
+  <script defer src="/__/firebase/7.2.0/firebase-app.js"></script>
+  <script defer src="/__/firebase/7.2.0/firebase-firestore.js"></script>
+  <script defer src="/__/firebase/7.2.0/firebase-storage.js"></script>
+  <script defer src="/__/firebase/init.js"></script>
+  <script src="res/data.js"></script>
+  <script src="res/func.js"></script>
+  <script>
+    cargarFilmes('cartelera', true);
+    cargarFilmes('estrenos', false);
+  </script>
 </head>
 
 <body>
@@ -29,12 +37,24 @@
         <li><a href="./html/galeria.html">Galeria</a></li>
         <li><a href="./html/quienes.html">Quienes Somos</a></li>
         <li><a href="./html/carrito.html">Carrito</a></li>
-        <li><img src="./res/carro-de-la-compra.png" height="50px" width="50px" href="#"></img><a href="./html/compra.html">Carrito</a></li>
+        <li><img src="./res/carro-de-la-compra.png" height="50px" width="50px" href="#"></img><a
+            href="./html/compra.html">Carrito</a></li>
       </ul>
     </div>
   </header>
 
-  <section id="main"></section>
+  <section class="container">
+    <div class="separador">
+      <span>&#127916;Películas en cartelera&#127916;</span>
+      <hr>
+    </div>
+    <article class="cards" id="cartelera"></article>
+    <div class="separador">
+      <span>&#127916;Próximos Estrenos&#127916;</span>
+      <hr>
+    </div>
+    <article class="cards" id="estrenos"></article>
+  </section>
 
   <footer>
     <article>
