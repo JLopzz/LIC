@@ -99,7 +99,7 @@ header #menu li:hover {
 /* --------------- menu desplegable --------------- */
 #btn-menu{
   display: none;
-  
+
 }
 header label{
   display: none;
@@ -157,7 +157,7 @@ footer .flist span { color: #981914; }
   header #logo{ display: none; }
   header #menu{
     position: absolute;
-    display: none;  
+    display: none;
     height: auto;
     transition: all 0.5s;
   }

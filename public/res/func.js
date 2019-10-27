@@ -3,6 +3,7 @@ function cargarFilmes(id, exhibiendose) {
     exhibiendose: !!exhibiendose,
     limit: 5
   });
+  console.log(f);
 
   window.addEventListener('load', async function () {
     let store = new Storage();
