@@ -40,13 +40,13 @@ export default class Inicio extends React.Component<{}, {
     return (
       <>
         <Separator title="🎬Películas en cartelera🎬" />
-        <CardContainer Cards={exhibicion.map(film =>
-          <Card key={film.Id} title={film.Titulo} text={film.Sinopsis.substr(0, 130) + '...'} />)
-        } />
+        <CardContainer cards={exhibicion.map(film =>
+          <Card key={film.Id} url={`./filme/${film.Id}`} title={film.Titulo} img={film.Portada} text={film.Sinopsis.substr(0, 130) + "..."} />
+        )} />
         <Separator title="🎬Próximos Estrenos🎬" />
-        <CardContainer Cards={estrenos.map(film =>
-          <Card key={film.Id} title={film.Titulo} text={film.Sinopsis.substr(0, 130) + '...'} />)
-        } />
+        <CardContainer cards={estrenos.map(film =>
+          <Card key={film.Id} url={`./filme/${film.Id}`} title={film.Titulo} img={film.Portada} text={film.Sinopsis.substr(0, 130) + "..."} />
+        )} />
       </>
     );
   }

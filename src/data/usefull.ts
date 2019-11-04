@@ -1,5 +1,5 @@
 import firebase from "firebase/app";
-import db from "../firebase";
+import { db } from "../firebase";
 
 export class Doc<F> {
   private collection: string;
@@ -37,6 +37,8 @@ export class Doc<F> {
           this.Data[k] = data[k];
         }
       }
+
+      return data;
     } catch (e) {
       console.log("Error getting Filme: ", e);
       return this.loaded = false;

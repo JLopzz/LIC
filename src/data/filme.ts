@@ -1,6 +1,7 @@
 import { Collection, Doc } from "./usefull";
+import { store } from "../firebase";
 
-interface PropFilm {
+export interface PropFilm {
   titulo: string;
   estreno: any;
   exhibiendose: boolean;
@@ -34,6 +35,9 @@ export class Film extends Doc<PropFilm>{
   }
   public get Portadas(): Array<string> {
     return this.Data.portada;
+  }
+  public get Portada() {
+    return store.ref(`/filmes/portada/${this.Portadas[0]}`);
   }
 }
 
