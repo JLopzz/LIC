@@ -1,6 +1,24 @@
 import { Collection, Doc } from "./usefull";
 import { store } from "../firebase";
 
+
+/**
+ * Date formatter
+ */
+function Formater(date: Date, str: string) {
+  let labelDay = ["Lunes", "Martes", "Miercoles", "Jueves", "Viernes"];
+  let labelMonth = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+
+  let res = new String(str).toString();
+  res = res.replace("dd", date.getDate().toString());
+  res = res.replace("DD", labelDay[date.getDay()]);
+  res = res.replace("mm", (date.getMonth() + 1).toString());
+  res = res.replace("MM", labelMonth[date.getMonth()]);
+  res = res.replace("yyyy", date.getFullYear().toString());
+
+  return res;
+}
+
 export interface PropFilm {
   titulo: string;
   estreno: any;
@@ -22,7 +40,7 @@ export class Film extends Doc<PropFilm>{
     return this.Data.titulo;
   }
   public get Estreno(): Date {
-    return this.Data.estreno.toDate();
+    return this.Data.estreno;
   }
   public get Exhibiendose(): boolean {
     return this.Data.exhibiendose;
@@ -38,6 +56,14 @@ export class Film extends Doc<PropFilm>{
   }
   public get Portada() {
     return store.ref(`/filmes/portada/${this.Portadas[0]}`);
+  }
+
+  public EstrenoFormateado(format: string): string {
+    return Formater(this.Data.estreno as Date, format);
+  }
+
+  public async Add() {
+    
   }
 }
 

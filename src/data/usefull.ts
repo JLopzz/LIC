@@ -80,7 +80,7 @@ export class Collection<I> {
       .startAt(filters.startAt)
       .limit(filters.limit);
 
-    if (filters.where !== null)
+    if (Array.isArray(filters.where))
       for (const [field, cond, value] of filters.where) {
         promise = promise.where(field, cond, value);
       }

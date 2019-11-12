@@ -8,8 +8,7 @@
     "test": "concurrently \"npm run serve\" \"npm run watch\" ",
     "serve": "firebase serve",
     "watch": "webpack -w",
-    "build": "webpack",
-    "prepublish": "npm run build",
+    "prepublish": "webpack",
     "publish": "firebase deploy"
   },
   "repository": {
@@ -27,12 +26,15 @@
   "dependencies": {
     "bootstrap": "^4.3.1",
     "firebase": "^7.2.2",
+    "formik": "^2.0.3",
     "react": "^16.11.0",
     "react-bootstrap": "^1.0.0-beta.14",
     "react-dom": "^16.11.0",
     "react-router-bootstrap": "^0.25.0",
     "react-router-dom": "^5.1.2",
-    "react-transition-group": "^4.3.0"
+    "react-transition-group": "^4.3.0",
+    "uuid-random": "^1.3.0",
+    "yup": "^0.27.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.6.4",
@@ -52,6 +54,7 @@
     "sass-loader": "^8.0.0",
     "style-loader": "^1.0.0",
     "typescript": "^3.6.4",
+    "url-loader": "^2.2.0",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.9"
   },
@@ -60,6 +63,7 @@
     "@types/react": "^16.9.11",
     "@types/react-dom": "^16.9.3",
     "@types/react-router-dom": "^5.1.0",
-    "@types/react-transition-group": "^4.2.3"
+    "@types/react-transition-group": "^4.2.3",
+    "@types/yup": "^0.26.24"
   }
 }
