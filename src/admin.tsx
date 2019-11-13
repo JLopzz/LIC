@@ -1,7 +1,27 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import AdminV0_1 from "./adminv0.1";
+
+import { Dashboard } from "./frame";
+
+import { FilmeCollection, ComestibleCollection } from "./admin/";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
-ReactDOM.render(<AdminV0_1 />, document.getElementById('app'));
+class Relleno extends React.Component {
+  render() {
+    return (
+      <p>Pagina Default</p>
+    );
+  }
+}
+
+ReactDOM.render(
+  <Dashboard
+    prefixedFile="/admin"
+    def={Relleno}
+    menu={[
+      FilmeCollection,
+      ComestibleCollection
+    ]}
+  />
+  , document.getElementById('app'));

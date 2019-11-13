@@ -10,7 +10,7 @@ interface Doc<T extends {}> {
 type DocumentProps<T> = {
   collection: string,
   id?: string,
-  data?: T
+  data: T | {}
 }
 
 export default class Document<T extends {}> implements Doc<T> {
@@ -34,7 +34,7 @@ export default class Document<T extends {}> implements Doc<T> {
   }: DocumentProps<T>) {
     this.Collection = collection;
     this.Id = id;
-    this.data = data;
+    this.data = (data as T);
   }
 
   async get() {
@@ -48,8 +48,8 @@ export default class Document<T extends {}> implements Doc<T> {
 
       if (!doc.exists) throw new Error(`Document '${this.Collection}[${this.Id}]' doesn't exists.`);
 
-      this.data = (doc.data() as T);
       this.loaded = true;
+      return this.data = (doc.data() as T);
     } catch (e) {
       console.log("Error getting document: ", e);
       return this.loaded = false;

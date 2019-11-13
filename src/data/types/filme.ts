@@ -22,7 +22,7 @@ export class Filme extends Document<FilmeProps>{
     super({
       collection: "filmes",
       id: id,
-      data: data
+      data: (!!data && !!data.titulo) ? data : {}
     });
   }
 

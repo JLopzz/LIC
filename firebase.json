@@ -6,7 +6,28 @@
       "**/.*",
       "**/node_modules/**"
     ],
+    "redirects": [
+      {
+        "source": "/filme{,/**}",
+        "destination": "/index.html",
+        "type": 301
+      },
+      {
+        "source": "/cartelera{,/**}",
+        "destination": "/index.html",
+        "type": 301
+      },
+      {
+        "source": "/admin/**",
+        "destination": "/admin.html",
+        "type": 301
+      }
+    ],
     "rewrites": [
+      {
+        "source": "/admin{,/**}",
+        "destination": "/admin.html"
+      },
       {
         "source": "**",
         "destination": "/index.html"

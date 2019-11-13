@@ -16,7 +16,7 @@ export class Comestible extends Document<ComestibleProps>{
     super({
       collection: "comestibles",
       id: id,
-      data: data
+      data: (!!data && !!data.titulo) ? data : {}
     });
   }
 
