@@ -1,6 +1,6 @@
 import React from "react";
 import { Separator, CardContainer, Card } from "../parts";
-import { Films, Film } from "../../data/filme";
+import { Filmes, Filme } from "../../data";
 
 export default class Cartelera extends React.Component<{
   match: {
@@ -9,18 +9,18 @@ export default class Cartelera extends React.Component<{
     }
   }
 }, {
-  filmes: Film[]
+  filmes: Filme[]
 }> {
-  private Filmes: Films;
+  private Filmes: Filmes;
 
   constructor(props) {
     super(props);
     this.state = { filmes: [] };
-    this.Filmes = new Films();
+    this.Filmes = new Filmes();
   }
 
   componentDidMount() {
-    this.Filmes.load({
+    this.Filmes.get({
       startAt: 0,
       limit: 5,
       orderBy: ["estreno", "asc"],

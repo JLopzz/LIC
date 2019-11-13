@@ -8,14 +8,6 @@ export default class Header extends React.Component<{
     [key: string]: string
   }
 }> {
-  private ulRef = React.createRef<HTMLUListElement>();
-
-  toggle() {
-    this.ulRef.current.className =
-      (this.ulRef.current.className === '') ?
-        'toggle' : '';
-  }
-
   render() {
     return (
       <Navbar expand="lg" className="bg-second mb-1" id="navbar">

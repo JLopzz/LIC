@@ -1,11 +1,9 @@
 import React from "react";
 import { Spinner } from "react-bootstrap";
-import { db, store } from "../../firebase";
-import { PropFilm, Film } from "../../data/filme";
+import { db, store, FilmeProps } from "../../data";
 import { Separator, CardContainer, Card } from "../parts";
 
-
-export default class Filme extends React.Component<{
+export default class FilmePage extends React.Component<{
   match: {
     params: {
       id: string
@@ -14,7 +12,7 @@ export default class Filme extends React.Component<{
 }, {
   score: number
   loaded: boolean
-} & Partial<PropFilm>> {
+} & Partial<FilmeProps>> {
   constructor(props) {
     super(props);
     this.state = { score: 0, loaded: false };
@@ -27,7 +25,7 @@ export default class Filme extends React.Component<{
   }
 
   componentDidMount() {
-    db.collection("peliculas").doc(this.props.match.params.id).get()
+    db.collection("filmes").doc(this.props.match.params.id).get()
       .then((snap) => {
         if (!snap.exists) return;
 
@@ -38,6 +36,11 @@ export default class Filme extends React.Component<{
           titulo, sinopsis, trailer, portada
         });
       });
+    try {
+
+    } catch (e) {
+
+    }
   }
 
   render() {

@@ -1,0 +1,24 @@
+body { overflow-x: hidden; }
+
+#sidebar {
+  min-height: 100vh;
+  margin-left: -15rem;
+  width: 15rem;
+  transition: margin .25s ease-out;
+
+  &.toggled {
+    margin-left: 0;
+  }
+
+  .sidebar-heading {
+    padding: .4rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+}
+
+#content-wrapper {
+  width: 100vw;
+}
+
+@media (min-width: 992px) {}

@@ -1,21 +1,21 @@
 import React from "react";
 import { Separator, Card, CardContainer } from "../parts";
-import { Films, Film } from "../../data/filme";
+import { Filmes, Filme } from "../../data";
 
 export default class Inicio extends React.Component<{}, {
-  exhibicion: Film[],
-  estrenos: Film[]
+  exhibicion: Filme[],
+  estrenos: Filme[]
 }> {
-  private Filmes: Films;
+  private Filmes: Filmes;
 
   constructor(props) {
     super(props);
     this.state = { exhibicion: [], estrenos: [] };
-    this.Filmes = new Films();
+    this.Filmes = new Filmes();
   }
 
   componentDidMount() {
-    this.Filmes.load({
+    this.Filmes.get({
       startAt: 0,
       limit: 5,
       orderBy: ["estreno", "asc"],
@@ -24,7 +24,7 @@ export default class Inicio extends React.Component<{}, {
       if (data) this.setState({ exhibicion: data });
     });
 
-    this.Filmes.load({
+    this.Filmes.get({
       startAt: 0,
       limit: 5,
       orderBy: ["estreno", "asc"],

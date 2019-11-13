@@ -10,7 +10,7 @@ export default class Cards extends React.Component<{
   title?: string
   url?: string
   text?: string
-  img?: firebase.storage.Reference
+  img?: string | firebase.storage.Reference
   video?: string
   score?: (n: number) => void
 
@@ -25,6 +25,10 @@ export default class Cards extends React.Component<{
   }
 
   componentDidMount() {
+    if (typeof this.props.img === "string") {
+      this.setState({ img: this.props.img });
+      return;
+    }
     if (!this.props.img || !this.props.img.getDownloadURL) return;
     this.props.img.getDownloadURL()
       .then(url => this.setState({ img: url.toString() }));

@@ -10,11 +10,6 @@ class Body extends React.Component<{
     [key: string]: React.ComponentClass | string
   }
 }> {
-  constructor(props: any) {
-    super(props);
-    this.state = { selected: Object.keys(props.pages)[0] }
-  }
-
   render() {
     let location = this.props.location;
 
