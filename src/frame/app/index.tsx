@@ -3,6 +3,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 
 import Body from "./body";
 import Header from "./header";
+import Footer from "./footer";
 
 export default class App extends React.Component<{
   def: React.ComponentClass
@@ -22,6 +23,7 @@ export default class App extends React.Component<{
             def={this.props.def}
             pages={this.props.pages}
           />
+          <Footer menu={this.props.menu} />
         </>
       </Router>
     );

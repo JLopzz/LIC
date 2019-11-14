@@ -15,7 +15,7 @@ class Body extends React.Component<{
     let { location, def, pages } = this.props;
 
     return (
-      <section className="bg-first">
+      <section className="bg-first pb-3">
         <TransitionGroup className="transitionWindow">
           <CSSTransition key={location.key}
             timeout={{ enter: 300, exit: 300 }}
