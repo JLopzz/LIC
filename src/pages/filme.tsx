@@ -60,11 +60,11 @@ export default class FilmePage extends React.Component<{
           <Card key="video" video={trailer} flex />,
         ]} />
         <Separator title="Galeria de imagenes" />
-        <Container>
+        <Container style={{width:'750px'}}>
           <Carousel>
             {imagenes.map(i =>
               <Carousel.Item>
-                <img key={uuid()} className="d-block w-100" src={i} />
+                <img key={uuid()} className="d-block w-100" src={i} style={{maxHeight:'750px'}}/>
                 <Carousel.Caption>
                   <h3>{titulo}</h3>
                 </Carousel.Caption>
